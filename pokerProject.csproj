@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Font\HancomMalangMalang-Bold.ttf" />
+    <None Remove="Resources\Alice1.jpg" />
+    <None Remove="Resources\alice2.PNG" />
+    <None Remove="Resources\alice3.PNG" />
+    <None Remove="Resources\bottennn.jpg" />
+    <None Remove="Resources\HancomMalangMalang-Bold.otf" />
+    <None Remove="Resources\start.jpg" />
+    <None Remove="Resources\start2.jpg" />
+    <None Remove="Resources\시작.JPG" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="OpenCvSharp4" Version="4.9.0.20240103" />
+    <PackageReference Include="OpenCvSharp4.Extensions" Version="4.9.0.20240103" />
+    <PackageReference Include="OpenCvSharp4.runtime.win" Version="4.9.0.20240103" />
+    <PackageReference Include="OpenCvSharp4.WpfExtensions" Version="4.9.0.20240103" />
+    <PackageReference Include="Tesseract" Version="5.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Font\HancomMalangMalang-Bold.ttf" />
+    <Resource Include="Resources\Alice1.jpg" />
+    <Resource Include="Resources\alice2.PNG" />
+    <Resource Include="Resources\alice3.PNG" />
+    <Resource Include="Resources\bottennn.jpg" />
+    <Resource Include="Resources\start.jpg" />
+    <Resource Include="Resources\start2.jpg" />
+    <Resource Include="Resources\시작.JPG" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
